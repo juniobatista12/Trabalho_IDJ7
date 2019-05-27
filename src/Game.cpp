@@ -1,7 +1,6 @@
 #include "Game.h"
 #include "InputManager.h"
 #include "Resources.h"
-#include <SDL_ttf.h>
 
 Game* Game::instance = nullptr;
 

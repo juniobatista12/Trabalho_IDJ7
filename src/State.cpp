@@ -36,7 +36,7 @@ weak_ptr<GameObject> State::AddObject(GameObject* go) {
 }
 
 weak_ptr<GameObject> State::GetObjectPtr(GameObject* go) {
-	for (int i = 0; i < objectArray.size(); i++) {
+	for (unsigned int i = 0; i < objectArray.size(); i++) {
 		if (objectArray[i].get() == go)
 			return weak_ptr<GameObject>(objectArray[i]);
 	}

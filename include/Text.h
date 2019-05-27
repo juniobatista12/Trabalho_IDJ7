@@ -1,6 +1,12 @@
-#pragma once
+#ifndef TEXT_H
+#define TEXT_H
 #include "Component.h"
-#include <SDL_ttf.h>
+#if defined (_WIN64) || defined (_WIN32)
+	#include <SDL_ttf.h>
+#else
+	#include <SDL2/SDL_ttf.h>
+#endif
+
 class Text : public Component {
 public:
 	enum TextStyle {SOLID, SHADED, BLENDED};
@@ -25,3 +31,4 @@ private:
 	SDL_Color color;
 };
 
+#endif

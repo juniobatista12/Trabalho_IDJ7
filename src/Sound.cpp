@@ -19,10 +19,7 @@ Sound::~Sound(){
 }
 
 bool Sound::IsPlaying() {
-	if (this != nullptr)
-		return Mix_Playing(channel);
-	else
-		return true;
+	return Mix_Playing(channel);
 }
 
 void Sound::Play(int times){
